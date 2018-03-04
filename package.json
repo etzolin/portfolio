@@ -1,14 +1,14 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio website for Lars Åkerlund, purpose not set yet.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack -d --watch --config webpack.dev.js",
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack -d --config webpack.dev.js",
-    "build:prod": "webpack -p --config webpack.prod.js"
+    "watch": "webpack --watch --env development",
+    "start": "webpack-dev-server --open --env development",
+    "build": "webpack --env development",
+    "build:prod": "webpack --env production"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/etzolin/portfolio#readme",
   "dependencies": {
-    "webpack": "^4.0.1"
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "webpack-dev-server": "^3.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -34,11 +36,18 @@
     "babel-preset-minify": "^0.3.0",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.18",
-    "html-webpack-plugin": "^2.30.1",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.0.4",
+    "node-sass": "^4.7.2",
+    "popper.js": "^1.12.9",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
     "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack-cli": "^2.0.9",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10",
     "webpack-merge": "^4.1.2"
   }
 }
